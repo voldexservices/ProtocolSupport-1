@@ -174,9 +174,9 @@ public abstract class AbstractLoginListener implements IPacketListener {
 
 	public void loginOffline() {
 		try {
-			LoginProfile profile = connection.getLoginProfile();
-			profile.setOriginalUUID(networkManager.getSpoofedUUID() != null ? networkManager.getSpoofedUUID() : Profile.generateOfflineModeUUID(profile.getName()));
-			networkManager.getSpoofedProperties().forEach(profile::addProperty);
+//			LoginProfile profile = connection.getLoginProfile();
+//			profile.setOriginalUUID(networkManager.getSpoofedUUID() != null ? networkManager.getSpoofedUUID() : Profile.generateOfflineModeUUID(profile.getName()));
+//			networkManager.getSpoofedProperties().forEach(profile::addProperty);
 			finishLogin();
 		} catch (Exception exception) {
 			disconnect(new TextComponent("Failed to verify username!"));
